@@ -1,0 +1,29 @@
+
+<button (click)="togle()">{{name? 'Hide': 'Show'}}</button>
+<h1 *ngIf="name">Mudassir</h1>
+<table border="1px" width="100%" cellPadding="10px" cellspacing="0px">
+    <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Age</th>
+        <th>Balance</th>
+        <th>Status</th>
+        <th>Friends email</th>
+    </tr>
+    <tr *ngFor="let arr of post">
+        <td>{{arr.name}}</td>
+        <td>{{arr.company}}</td>
+        <td>{{arr.age}}</td>
+        <td>{{arr.balance}}</td>
+        <td>{{arr.isActive?"online":"ofline"}}</td>
+        <td><button (click)="friendEmail(arr)">Friends</button></td>
+    </tr>
+</table>
+
+<select >
+    <option *ngFor="let arr of post">{{arr.email}}</option>
+</select><br><br>
+
+<select >
+    <option *ngFor="let arr of frindName">{{arr.name}}</option>
+</select>

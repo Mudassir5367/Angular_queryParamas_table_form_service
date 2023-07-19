@@ -1,0 +1,15 @@
+<br><br><table cellPadding="10px" cellspacing="0px" border="1px solid black">
+    <tr>
+        <th>Sr No.</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let user of getFormData; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><button (click)="edit(user,i)">Edit</button></td>
+        <td><button (click)="del(i)">Delete</button></td>
+    </tr>
+</table>

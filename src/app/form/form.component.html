@@ -1,0 +1,12 @@
+<h2>Add users</h2>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <input type="text" [(ngModel)]="user.name" name="name"><br><br>
+    <input type="text" [(ngModel)]="user.email" name="email"><br><br>
+    <button type="submit">Add</button>
+</form>
+<button (click)="togle()">Toggle
+    <!-- {{buttonName}} -->
+</button>
+<h2>{{test}}</h2>
+<app-table [getFormData]="formData"></app-table> 
+<!-- <app-table [getFormData]="formData" (sendToForm)="fetchForEdit($event)"></app-table>  -->
